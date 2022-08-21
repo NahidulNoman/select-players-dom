@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #252525;
+}
+.banner{
+    background-color: black;
+    height: 500px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 5%;
+}
+#title{
+    color: orangered;
+}
+#description{
+    color: white;
+}
+.main-content{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 27%;
+}
