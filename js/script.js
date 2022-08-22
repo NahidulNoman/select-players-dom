@@ -1,4 +1,5 @@
 // add button clicked and call function from utilities.
+
 document.getElementById('btn-bappe').addEventListener('click',function(){
     callAddButton('btn-bappe','Kylian Mbappé');
 })
@@ -19,10 +20,13 @@ document.getElementById('btn-ramos').addEventListener('click',function(){
 })
 
 // calculate total expenses and call function from utilities.
+
 document.getElementById('per-player-cal').addEventListener('click',function(){
     calculateTotalExpenses();
 })
+
 // total team cost calculate and call function from utilities.
+
 document.getElementById('total-cal').addEventListener('click',function(){
     teamCost();
 })

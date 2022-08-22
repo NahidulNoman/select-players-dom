@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Paris-Saint-Germain</title>
+    <!-- bootstrap cnd link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- custom css link -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-       <header class="banner mb-5">
+    <!-- header section start -->
+       <header class="banner">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -27,7 +30,9 @@
                 </div>
               </div>
        </header>
+<!---- header section end-- -->
 
+<!-- first section start -->
        <section class="container">
         <div class="row gx-5 gy-3">
 
@@ -71,15 +76,15 @@
             <!-- Selected - V option -->
             <div class="col-3">
                 <div class="card" style="width: 17rem; height: 22rem; background-color: black; color: white;">
-                   <h1 class="card-title text-center fw-semibold fs-3 mt-3">Selected - V</h1>
-                    <ol id="order-list">
-                       
+                   <h1 class="card-title text-center fw-semibold fs-3 mt-3 text-warning">Selected - V</h1>
+                    <ol id="order-list"> 
                     </ol>
+               </div>
             </div>
-
-        </div>
     </section>
-<!-- section 2nd part  -->
+<!---- first section end----->
+
+<!---- second section start ----->
     <section class="container mt-3">
 
         <div class="row gx-5 gy-3">
@@ -99,9 +104,9 @@
             </div>
             <div class="col-3">
                 <div class="card" style="width: 17rem;background-color: black; color: white;">
-                    <img src="images/Rectangle 144 (5).png" class="card-img-top" alt="...">
+                    <img src="images/Rectangle 144 (2).png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Vítor Machado</h5>
+                      <h5 class="card-title">Sergio Ramos</h5>
                      <p class="opacity-50">Goal - 2 : Assist - 4</p>
                       <div class="d-flex justify-content-center align-items-center">
                         <button id="btn-vitor" type="button" class="btn btn-primary px-5">SELECT</button>
@@ -111,9 +116,9 @@
             </div>
             <div class="col-3">
                 <div class="card" style="width: 17rem;background-color: black; color: white;">
-                    <img src="images/Rectangle 144 (2).png" class="card-img-top" alt="...">
+                    <img src="images/Rectangle 144 (5).png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Sergio Ramos</h5>
+                      <h5 class="card-title">Vítor Machado</h5>
                       <p class="opacity-50">Goal - 13 : Assist - 23</p>
                       <div class="d-flex justify-content-center align-items-center">
                         <button id="btn-ramos" type="button" class="btn btn-primary px-5">SELECT</button>
@@ -122,23 +127,31 @@
                   </div>
             </div>
 
-            <!-- Budget -->
+            <!-- Budget option -->
+
             <div class="col-3">
                 <div class="card" style="width: 17rem; background-color: black; color: white;">
-                    <h1 class="text-center fw-semibold fs-3 mt-3">Budget</h1>
+                    <h1 class="text-center fw-semibold fs-3 mt-3 text-warning">Budget</h1>
                     <div class="card-body">
                      <div class="container">
                         <p class="opacity-75">Per-Player : <input id="per-player" class="w-50 bg-black text-white" type="text"></p>
+
                         <div class="d-flex justify-content-center">
                             <button id="per-player-cal" class="btn btn-primary mx-auto mt-3 px-4" type="submit">Calculate</button>
                         </div>
+
                         <p class="mt-2 opacity-75">Player-Expenses : $<span id="player-expenses" class="text-warning"></span></p>
+
                         <p class="opacity-75">Manager : <input id="manager" class="w-50 mb-3 bg-black text-white ms-2" type="text"></p>
+
                        <p class="opacity-75"> Coach   : <input id="coach" class="w-50 bg-black text-white ms-4" type="text"></p>
+                       
                         <div class="d-flex justify-content-center">
                             <button id="total-cal" class="btn btn-primary mx-auto mt-3 px-4" type="submit">Calculate Total</button>
                         </div>
+
                         <p class="mt-2 opacity-75">Total : $<span id="sub-total" class="text-warning"></span></p>
+
                      </div>
 
                     </div>
@@ -147,8 +160,11 @@
 
         </div>
     </section>
-      
+<!---- second section end ----->
+
+<!---- footer section here ---->
        <footer class="text-center text-white p-5 mt-5 fw-semibold ">Copyright @ 2022 All Rights Reserved.</footer>
+<!---- script option added here ---->
 <script src="js/utilities.js"></script>
 <script src="js/script.js"></script>
   </body>
