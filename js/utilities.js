@@ -27,10 +27,10 @@ function calculateTotalExpenses(){
     let getPerPlayerString = getPerPlayer.value;
     let perPlayer = parseInt(getPerPlayerString);
    
-    // if(isNaN(getPerPlayer)){
-    //    alert('Please inter a number!!');
-    //     return;
-    // } 
+    if(isNaN(perPlayer)){
+       alert('Please inter a number!!');
+        return;
+    } 
     let totalLength = nodeLength * perPlayer;
 
     let playerExpenses = document.getElementById('player-expenses');
@@ -38,6 +38,7 @@ function calculateTotalExpenses(){
     parseInt(playerExpensesString);
 
     playerExpenses.innerText = totalLength;
+    getPerPlayer.value = '';
 }
 
 // whole team cost calculate here.
@@ -55,14 +56,16 @@ function teamCost(){
     let coachSting = coachCost.value;
     let coach = parseInt(coachSting);
 
-    // if(isNaN(managerCost,coachCost)){
-    //     alert('Please put in a number!!');
-    //     return;
-    // }
+    if(isNaN(manager,coach)){
+        alert('Please put in a number!!');
+        return;
+    }
     let subTotal = document.getElementById('sub-total');
     let subTotalString = subTotal.value;
     parseInt(subTotalString);
 
     let fullTeamCost = player + manager + coach ;
     subTotal.innerText = fullTeamCost;
+    managerCost.value = '';
+    coachCost.value = '';
 }
