@@ -10,10 +10,12 @@ function callAddButton(id,value){
     }
     else{
         alert('you add maximum player!!');
+        return;
     }
     let button = document.getElementById(id);
     button.disabled = true;
 }
+// calculate total expenses.
 function calculateTotalExpenses(){
     let nodeList = document.querySelectorAll('li');
     let nodeLength = nodeList.length;
@@ -21,16 +23,22 @@ function calculateTotalExpenses(){
     let getPerPlayer = document.getElementById('per-player');
     let getPerPlayerString = getPerPlayer.value;
     let perPlayer = parseInt(getPerPlayerString);
+   
+    // if(isNaN(getPerPlayer)){
+    //    alert('Please inter a number!!');
+    //     return;
+    // } 
+        let totalLength = nodeLength * perPlayer;
 
-    let totalLength = nodeLength * perPlayer;
+        let playerExpenses = document.getElementById('player-expenses');
+        let playerExpensesString = playerExpenses.innerText;
+        parseInt(playerExpensesString);
 
-    let playerExpenses = document.getElementById('player-expenses');
-    let playerExpensesString = playerExpenses.innerText;
-    parseInt(playerExpensesString);
+        playerExpenses.innerText = totalLength;
 
-    playerExpenses.innerText = totalLength;
+    
 }
-
+// whole team cost calculate here.
 function teamCost(){
     let playerCost = document.getElementById('player-expenses');
     let playerExpensesString = playerCost.innerText;
@@ -44,6 +52,10 @@ function teamCost(){
     let coachSting = coachCost.value;
     let coach = parseInt(coachSting);
 
+    // if(isNaN(managerCost,coachCost)){
+    //     alert('Please put in a number!!');
+    //     return;
+    // }
     let subTotal = document.getElementById('sub-total');
     let subTotalString = subTotal.value;
     parseInt(subTotalString);
